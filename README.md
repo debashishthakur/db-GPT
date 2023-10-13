@@ -41,6 +41,6 @@ To enhance the language understanding, db-GPT uses the GloVe word embeddings, wh
 ## Contributing
 We welcome contributions to improve db-GPT. Whether it's adding new features, improving accuracy, or expanding database compatibility, your input is valuable. Feel free to fork this repository and make a pull request.
 
-
-
+##Note
+This project is still under construction and there is a large room for improvement. This sequence to sequence model is trained on a very small dataset and is only meant for learning purposes. (This project was a part of an assignment that was assigned to me by an organisation)
 
