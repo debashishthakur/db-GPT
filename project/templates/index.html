@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <main class="py-lg-3">
+    <h1>SQL Generator.</h1>
+    <p class="lead">SQL Generator is a one stop platform to generate SQL queries without having the knowledge of SQL.</p>
+    <form action="/submit_query" method="POST">
+      
+      <input type="text" class="form-control py-2" id="input_data" name="user_query" placeholder="Write your queries..." aria-label="Recipient's username" aria-describedby="button-addon2" required>
+      <p>
+
+      </p>
+    
+      <button class="btn btn-outline-secondary" id = "submitbtn" type="submit" <a href="/submit_query" style="text-decoration: none;" >Fetch Data</a></button>
+  </form>
+    <p class="lead py-5">
+      <a href="/viewdb" class="btn btn-lg btn-light fw-bold border-white bg-white">View Database</a>
+    </p>
+  </main>
+
+{% endblock body %}

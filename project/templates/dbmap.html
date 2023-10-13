@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="path/to/your_stylesheet.css">
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body>
+    <h1>Databases</h1>
+    <div class="tab">
+        <button class="tablink" onclick="openTab(event, 'table1')">Table 1</button>
+        <button class="tablink" onclick="openTab(event, 'table2')">Table 2</button>
+        <button class="tablink" onclick="openTab(event, 'table3')">Table 3</button>
+        <button class="tablink" onclick="openTab(event, 'table4')">Table 4</button>
+    </div>
+    <div id="table1" class="tabcontent">
+        {{ table1 | safe }}
+    </div>
+    <div id="table2" class="tabcontent">
+        {{ table2 | safe }}
+    </div>
+    <div id="table3" class="tabcontent">
+        {{ table3 | safe }}
+    </div>
+    <div id="table4" class="tabcontent">
+        {{ table4 | safe }}
+    </div>
+</body>
+</html>
+
+
+
+
+
+{% endblock body %}
