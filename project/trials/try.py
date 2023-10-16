@@ -10141,8 +10141,8 @@ for i in hm:
         if j not in target_tokenizer:
             target_tokenizer[j] = index_t
             index_t += 1
-
-# print(source_tokenizer)
+source_tokenizer = {v: k for k, v in source_tokenizer.items()}
+print(source_tokenizer)
 # print(target_tokenizer)
 
 ##maximum output sequence length
@@ -10158,11 +10158,11 @@ for i in hm:
 
 
 
-train_encoder_inputs = [example["question_toks"] for example in hm]
-train_decoder_inputs = [example["query_toks"] for example in hm]
+# train_encoder_inputs = [example["question_toks"] for example in hm]
+# train_decoder_inputs = [example["query_toks"] for example in hm]
 
-encoder_input_data_nopad = [[source_tokenizer[word] for word in sentence] for sentence in train_encoder_inputs]
-# print(encoder_input_data)
+# encoder_input_data_nopad = [[source_tokenizer[word] for word in sentence] for sentence in train_encoder_inputs]
+# # print(encoder_input_data)
 
-decoder_input_data_nopad = [[target_tokenizer[word] for word in sentence] for sentence in train_decoder_inputs]
-# print(decoder_input_data)
+# decoder_input_data_nopad = [[target_tokenizer[word] for word in sentence] for sentence in train_decoder_inputs]
+# # print(decoder_input_data)
