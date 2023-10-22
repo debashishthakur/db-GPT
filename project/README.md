@@ -18,13 +18,6 @@ Welcome to the project directory for db-GPT! This directory contains the code an
 
 - **requirements.txt**: This file lists all the required dependencies for the project. Before running the application, make sure to install these dependencies.
 
-## Getting Started
-
-To run the application, follow these steps:
-
-1. **Install Dependencies**: Open a terminal and navigate to the project directory. Run the following command to install the required Python packages:
-
-
 
 ## Getting Started
 
