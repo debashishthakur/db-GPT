@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, send_file
 from io import BytesIO
+
 import pandas as pd
 app = Flask(__name__)
 
@@ -16,8 +17,11 @@ def results():
 @app.route("/submit_query", methods = ['POST'])
 def user_query():
     from database import fetch_data
-    user_query = request.form.get('user_query') 
-    results = fetch_data(user_query)  
+    user_query = request.form.get('user_query')
+    from gf2_model import generate_sql_query
+    SQL_query = generate_sql_query(user_query) 
+    results = fetch_data(SQL_query)  
+    # print(results)
     df_html = results.to_html(classes='container-fluid table table-striped table-bordered table-hover table-condensed', index=False, escape=False)           
     return render_template('results.html', df_html = df_html)
 
