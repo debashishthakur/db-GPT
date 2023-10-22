@@ -1,6 +1,6 @@
 # Project Directory README
 
-Welcome to the project directory for [Your Project Name]! This directory contains the code and resources for our project. Below, you'll find an overview of the contents and instructions on how to get started.
+Welcome to the project directory for db-GPT! This directory contains the code and resources for our project. Below, you'll find an overview of the contents and instructions on how to get started.
 
 ## Contents
 
